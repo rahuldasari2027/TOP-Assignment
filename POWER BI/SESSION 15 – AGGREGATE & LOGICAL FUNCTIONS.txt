@@ -1,0 +1,164 @@
+SESSION 15 – AGGREGATE & LOGICAL FUNCTIONS
+
+Q1. Create a table of 5 most-used food delivery apps with a column for total orders placed. Use the SUM function to calculate the total number of orders across all apps and display it in a Card.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Create or load a table containing 5 food delivery apps.
+- Add the following apps:
+  - Zomato
+  - Swiggy
+  - Domino's
+  - McDonald's
+  - Pizza Hut
+- Add a column named Total Orders.
+- Enter the order count for each app.
+- Go to the Modeling tab.
+- Click New Measure.
+- Enter the following DAX formula:
+
+Total Orders = SUM(Apps[Total Orders])
+
+- Press Enter.
+- Go to Report View.
+- Select a Card visual.
+- Drag Total Orders into the Card.
+- Check the total number of orders across all apps.
+
+Result:
+
+- A table containing 5 food delivery apps was created.
+- The SUM function successfully calculated the total orders.
+- The total orders were displayed in a Card visual.
+
+
+Q2. Add an Order Ratings column with random ratings between 1 and 5 for each app. Use the AVERAGE function to show the average rating across all apps in a separate Card.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Select the Apps table.
+- Add a column named Order Ratings.
+- Enter ratings between 1 and 5 for each app.
+- Go to the Modeling tab.
+- Click New Measure.
+- Enter the following DAX formula:
+
+Average Rating = AVERAGE(Apps[Order Ratings])
+
+- Press Enter.
+- Go to Report View.
+- Select a Card visual.
+- Drag Average Rating into the Card.
+- Check the average rating.
+
+Result:
+
+- An Order Ratings column was successfully added.
+- The AVERAGE function calculated the average rating across all apps.
+- The average rating was displayed in a Card visual.
+
+
+Q3. Create a slicer to filter the table by order ratings greater than 3. Use COUNT and DISTINCTCOUNT to display the total number of orders and the count of unique apps with ratings above 3.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Go to Report View.
+- Select a Slicer visual.
+- Drag Order Ratings into the slicer.
+- Set the slicer/filter condition to ratings greater than 3.
+- Create a measure for the total number of orders.
+- Click Modeling → New Measure.
+- Enter:
+
+Order Count = COUNT(Apps[Total Orders])
+
+- Press Enter.
+- Create another measure for unique apps.
+- Click Modeling → New Measure.
+- Enter:
+
+Unique Apps = DISTINCTCOUNT(Apps[App Name])
+
+- Press Enter.
+- Add a Card visual for Order Count.
+- Add another Card visual for Unique Apps.
+- Select ratings greater than 3 in the slicer.
+- Observe how the Cards respond to the filter.
+
+Result:
+
+- A rating slicer was successfully created.
+- COUNT was used to count orders.
+- DISTINCTCOUNT was used to count unique apps.
+- The Cards show results based on ratings greater than 3.
+
+
+Q4. Add a calculated column that shows High Performer if the app's order count is above the average, otherwise Regular. Use SWITCH, AND/OR, VAR, and RETURN.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Select the Apps table.
+- Go to Modeling.
+- Click New Column.
+- Enter the following DAX formula:
+
+Performance =
+VAR AvgOrders = AVERAGE(Apps[Total Orders])
+RETURN
+SWITCH(
+    TRUE(),
+    Apps[Total Orders] > AvgOrders, "High Performer",
+    "Regular"
+)
+
+- Press Enter.
+- A new Performance column will be created.
+- Check the values in the table.
+- Apps with orders above the average are labeled High Performer.
+- Other apps are labeled Regular.
+
+Result:
+
+- A calculated Performance column was successfully created.
+- VAR was used to store the average order count.
+- RETURN was used to return the final result.
+- SWITCH was used to classify the apps.
+
+
+Q5. Create a DAX measure that returns Top Choice if an app has more than 100 orders and a rating above 4, otherwise Consider Alternatives. Use AND, IF, and NOT functions.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Select the Apps table.
+- Go to the Modeling tab.
+- Click New Measure.
+- Enter the following DAX formula:
+
+App Recommendation =
+IF(
+    AND(
+        SUM(Apps[Total Orders]) > 100,
+        AVERAGE(Apps[Order Ratings]) > 4
+    ),
+    "Top Choice",
+    "Consider Alternatives"
+)
+
+- Press Enter.
+- Go to Report View.
+- Select a Table visual or Card visual.
+- Add App Name to the visual.
+- Add App Recommendation to the visual.
+- Check the result for each app.
+
+Result:
+
+- A DAX measure was successfully created.
+- AND checks both conditions.
+- IF returns Top Choice when both conditions are true.
+- Otherwise, it returns Consider Alternatives.

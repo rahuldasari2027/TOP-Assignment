@@ -1,0 +1,121 @@
+SESSION 12 – ADVANCED VISUALS
+
+Q1. Import monthly sales data for Zomato, Swiggy, and Uber Eats and create a Waterfall Chart to visualize the change in total orders from January to June.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Click on Get Data.
+- Select Text/CSV.
+- Select the monthly food delivery sales CSV file.
+- Click Open.
+- Click Load or Transform Data.
+- Go to Report View.
+- Select the Waterfall Chart visual.
+- Drag Month into Category.
+- Drag Total Orders into Y-axis.
+- Check the chart.
+- Format the title and data labels if required.
+- Add a suitable title such as Monthly Order Change.
+
+Result:
+
+- A Waterfall Chart was successfully created.
+- The chart shows the increase and decrease in total orders from January to June.
+
+
+Q2. Using an IPL fantasy league user sign-up dataset, create a Funnel Chart showing the number of users at each stage.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the IPL fantasy league user sign-up dataset.
+- Go to Report View.
+- Select the Funnel Chart visual.
+- Drag Stage into Category.
+- Drag User Count into Values.
+- Arrange the stages in the correct order:
+  - Visited App
+  - Registered
+  - Created Team
+  - Joined League
+  - Made Payment
+- Check the Funnel Chart.
+- Format the title and data labels if required.
+
+Result:
+
+- A Funnel Chart was successfully created.
+- The chart shows how the number of users decreases at each stage of the sign-up process.
+
+
+Q3. Import city-wise Flipkart order volume data and create a Map visual showing cities with the highest and lowest order counts.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Import the city-wise Flipkart order dataset.
+- Go to Report View.
+- Select the Map visual.
+- Drag City into Location.
+- Drag Order Volume into Size.
+- If required, drag Order Volume into Color saturation or another supported field.
+- Check that Power BI correctly identifies the cities.
+- Add data labels or tooltips if required.
+- Format the map title.
+
+Result:
+
+- A Map visual was successfully created.
+- The map displays cities based on their order volumes.
+- Cities with higher order counts appear with larger markers.
+
+
+Q4. Create a TreeMap for movies released in 2023 showing box office collections by genre and individual movie.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the movie dataset.
+- Filter the Release Year to 2023.
+- Go to Report View.
+- Select the TreeMap visual.
+- Drag Genre into Group.
+- Drag Movie Name into Details if available.
+- Drag Box Office Collection into Values.
+- Check the TreeMap.
+- Each genre will appear as a group.
+- Individual movies will appear within their respective genre.
+- Add data labels if required.
+- Add a suitable title such as 2023 Movie Box Office Collection.
+
+Result:
+
+- A TreeMap was successfully created.
+- The TreeMap shows box office collections by genre and individual movie.
+
+
+Q5. Create a Scatter Chart showing the relationship between average daily active users and average session duration for popular Indian apps. Identify outliers.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the app usage dataset.
+- Go to Report View.
+- Select the Scatter Chart visual.
+- Drag Average Session Duration into X-axis.
+- Drag Average Daily Active Users into Y-axis.
+- Drag App Name into Details.
+- Check the Scatter Chart.
+- Turn on Data Labels if required.
+- Identify points that are far away from the main group.
+- These points can be considered possible outliers.
+- Check the data values of the outliers.
+- Explain that an outlier may represent an app with unusually high or low users or session duration.
+
+Result:
+
+- A Scatter Chart was successfully created.
+- The chart shows the relationship between average daily active users and average session duration.
+- Possible outliers were identified based on points that are far from the main cluster.

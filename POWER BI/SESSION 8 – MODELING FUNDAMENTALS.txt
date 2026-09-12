@@ -1,0 +1,119 @@
+SESSION 8 – MODELING FUNDAMENTALS
+
+Q1. In Power BI Desktop, create two tables: Restaurants and Reviews. Identify and set the primary key and foreign key relationships.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Create a Restaurants table.
+- Add the columns RestaurantID, Name, and Cuisine.
+- Create a Reviews table.
+- Add the columns ReviewID, RestaurantID, Rating, and Comment.
+- Make RestaurantID unique in the Restaurants table.
+- Use RestaurantID as the Primary Key in the Restaurants table.
+- In the Reviews table, RestaurantID will act as the Foreign Key.
+- Go to Model View.
+- Connect Restaurants[RestaurantID] with Reviews[RestaurantID].
+- Set the relationship as One-to-Many.
+- Check the relationship between the two tables.
+
+Result:
+
+- The Restaurants and Reviews tables were successfully created.
+- RestaurantID was used as the Primary Key in Restaurants and Foreign Key in Reviews.
+- A One-to-Many relationship was created.
+
+
+Q2. Design a Star Schema in Power BI for a Zomato-style food delivery dataset by creating an Orders fact table and at least three dimension tables.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Create an Orders table as the central Fact table.
+- Add fields such as OrderID, CustomerID, RestaurantID, DishID, OrderDate, Quantity, and Amount.
+- Create a Customers dimension table.
+- Create a Restaurants dimension table.
+- Create a Dishes dimension table.
+- Go to Model View.
+- Connect Customers to Orders using CustomerID.
+- Connect Restaurants to Orders using RestaurantID.
+- Connect Dishes to Orders using DishID.
+- Set the relationships as One-to-Many.
+- Keep the Orders table in the center.
+- Keep the dimension tables around the Orders table.
+
+Result:
+
+- A Star Schema was successfully created.
+- Orders was used as the central Fact table.
+- Customers, Restaurants, and Dishes were used as Dimension tables.
+
+
+Q3. Modify the Star Schema into a Snowflake Schema by normalizing one dimension table.
+
+Ans:- Steps:
+
+- Open the Star Schema created in the previous task.
+- Select the Restaurants dimension table.
+- Create a separate Locations table.
+- Add LocationID, City, and State to the Locations table.
+- Keep RestaurantID and LocationID in the Restaurants table.
+- Remove repeated location information from the Restaurants table if required.
+- Go to Model View.
+- Connect Locations to Restaurants using LocationID.
+- Connect Restaurants to Orders using RestaurantID.
+- Check the relationship directions.
+- The dimension table is now normalized into additional related tables.
+
+Result:
+
+- The Star Schema was successfully modified into a Snowflake Schema.
+- The Restaurants dimension was normalized using a separate Locations table.
+
+
+Q4. Import Users, Playlists, and Collaborators tables and create a many-to-many relationship scenario.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Import the Users table with UserID, Name, and Email.
+- Import the Playlists table with PlaylistID, Name, and UserID.
+- Import the Collaborators table with PlaylistID and UserID.
+- Go to Model View.
+- Connect Users[UserID] with Playlists[UserID].
+- Connect Users[UserID] with Collaborators[UserID].
+- Connect Playlists[PlaylistID] with Collaborators[PlaylistID].
+- Use the Collaborators table as a bridge table.
+- This allows multiple users to collaborate on multiple playlists.
+- Check the relationships in Model View.
+
+Result:
+
+- Users, Playlists, and Collaborators tables were successfully connected.
+- The Collaborators table was used to represent a many-to-many relationship.
+
+
+Q5. Fix incorrect Orders totals caused by a missing relationship between Orders and Dish tables.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Go to Model View.
+- Find the Orders table.
+- Find the Dishes table.
+- Check whether a relationship exists between the two tables.
+- Check the common key, such as DishID.
+- If the relationship is missing, create a relationship between Orders[DishID] and Dishes[DishID].
+- Set the relationship to One-to-Many.
+- Make sure the Dishes table contains unique DishID values.
+- Check for unmatched or blank keys.
+- Check whether the relationship is active.
+- Save the model.
+- Go back to Report View.
+- Check the Orders totals again.
+
+Result:
+
+- The missing relationship was identified and fixed.
+- The Orders totals were corrected by creating the appropriate One-to-Many relationship.
+

@@ -1,0 +1,123 @@
+
+
+
+SESSION 17 – FILTER & ITERATOR FUNCTIONS IN POWER BI (DAX)
+
+TASK 1 – FILTER()
+Products Rating Above 4 =
+COUNTROWS(
+    FILTER(
+        Flipkart,
+        Flipkart[Rating] > 4
+    )
+)
+
+TASK 2 – CALCULATE() + ALL()
+Overall Average Order Value =
+CALCULATE(
+    AVERAGE(Zomato[OrderValue]),
+    ALL(
+        Zomato[City],
+        Zomato[Cuisine]
+    )
+)
+
+TASK 3 – RANKX()
+Total Box Office =
+SUM(Movies[BoxOffice])
+
+Movie Rank =
+RANKX(
+    ALL(Movies[Movie]),
+    [Total Box Office],
+    ,
+    DESC,
+    DENSE
+)
+
+TASK 4 – SUMX()
+Cart Total =
+SUMX(
+    Myntra,
+    Myntra[Quantity] * Myntra[Price]
+)
+
+TASK 5 – AVERAGEX()
+Average Restaurant Rating =
+AVERAGEX(
+    VALUES(RestaurantReviews[Restaurant]),
+    CALCULATE(
+        AVERAGE(RestaurantReviews[Rating])
+    )
+)
+
+FUNCTION SUMMARY
+FILTER() = Filter rows
+CALCULATE() = Change filter context
+ALL() = Remove filters
+ALLEXCEPT() = Remove all filters except specified columns
+VALUES() = Return unique values
+RANKX() = Rank values
+SUMX() = Calculate row by row and then sum
+AVERAGEX() = Calculate row by row and then average
+
+SAMPLE FLIPKART DATA
+ProductID | Product | Rating | Price
+1 | Mobile | 4.5 | 15000
+2 | Laptop | 4.2 | 55000
+3 | Headphones | 3.8 | 2500
+4 | TV | 4.7 | 45000
+5 | Watch | 4.1 | 5000
+6 | Camera | 4.6 | 35000
+7 | Keyboard | 3.9 | 1800
+8 | Tablet | 4.4 | 22000
+9 | Speaker | 4.8 | 6000
+10 | Monitor | 4.3 | 18000
+
+SAMPLE ZOMATO DATA
+OrderID | User | City | Cuisine | OrderValue
+1 | Rahul | Mumbai | Indian | 500
+2 | Amit | Delhi | Chinese | 700
+3 | Priya | Mumbai | Italian | 900
+4 | Neha | Pune | Indian | 400
+5 | Rohit | Delhi | Italian | 800
+6 | Sneha | Mumbai | Chinese | 600
+7 | Arjun | Pune | Indian | 300
+8 | Kiran | Delhi | Chinese | 1000
+9 | Anjali | Mumbai | Indian | 550
+10 | Vijay | Pune | Italian | 750
+
+SAMPLE MOVIES DATA
+MovieID | Movie | BoxOffice
+1 | Movie A | 500
+2 | Movie B | 850
+3 | Movie C | 1200
+4 | Movie D | 650
+5 | Movie E | 950
+6 | Movie F | 400
+7 | Movie G | 1500
+8 | Movie H | 700
+
+SAMPLE MYNTRA DATA
+ItemID | Item | Quantity | Price
+1 | T-Shirt | 2 | 500
+2 | Jeans | 1 | 1200
+3 | Shoes | 2 | 2000
+4 | Jacket | 1 | 2500
+5 | Cap | 3 | 400
+6 | Shirt | 2 | 800
+
+SAMPLE RESTAURANT DATA
+Restaurant | City | Rating
+Restaurant A | Mumbai | 4.2
+Restaurant A | Mumbai | 4.5
+Restaurant A | Mumbai | 4.0
+Restaurant B | Delhi | 3.8
+Restaurant B | Delhi | 4.2
+Restaurant B | Delhi | 4.0
+Restaurant C | Pune | 4.5
+Restaurant C | Pune | 4.8
+Restaurant C | Pune | 4.6
+Restaurant D | Mumbai | 3.5
+Restaurant D | Mumbai | 3.9
+Restaurant D | Mumbai | 4.1

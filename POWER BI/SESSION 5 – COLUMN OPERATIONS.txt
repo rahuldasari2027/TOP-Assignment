@@ -1,0 +1,103 @@
+SESSION 5 – COLUMN OPERATIONS
+
+Q1. Import a CSV of Zomato restaurant listings and use Split Column by Delimiter to separate the Restaurant Name - Area column into Restaurant Name and Area.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Click on Get Data.
+- Select Text/CSV.
+- Select the Zomato restaurant CSV file.
+- Click Open.
+- Click Transform Data.
+- Power Query Editor will open.
+- Select the Restaurant Name - Area column.
+- Go to the Transform tab.
+- Click Split Column.
+- Select By Delimiter.
+- Choose the delimiter used between Restaurant Name and Area.
+- Click OK.
+- Rename the two columns as Restaurant Name and Area.
+
+Result:
+
+- The Restaurant Name - Area column was successfully split into Restaurant Name and Area.
+
+
+Q2. Use the Merge Columns feature to combine First Name and Last Name into a single Full Name column, separated by a space.
+
+Ans:- Steps:
+
+- Open Power Query Editor.
+- Select the First Name column.
+- Hold Ctrl and select the Last Name column.
+- Go to the Transform tab.
+- Click Merge Columns.
+- Select Space as the separator.
+- Enter Full Name as the new column name.
+- Click OK.
+- The First Name and Last Name columns will be combined.
+
+Result:
+
+- First Name and Last Name were successfully merged into a single Full Name column.
+
+
+Q3. Replace all instances of Cancelled with Order Failed in the Order Status column using Replace Values.
+
+Ans:- Steps:
+
+- Open Power Query Editor.
+- Select the Order Status column.
+- Go to the Transform tab.
+- Click Replace Values.
+- Enter Cancelled in the Value To Find box.
+- Enter Order Failed in the Replace With box.
+- Click OK.
+- Check the Order Status column.
+- All Cancelled values will be changed to Order Failed.
+
+Result:
+
+- All Cancelled values in the Order Status column were successfully replaced with Order Failed.
+
+
+Q4. Change the data type of the Order Amount column from Text to Decimal Number and verify that the column supports numerical calculations.
+
+Ans:- Steps:
+
+- Open Power Query Editor.
+- Select the Order Amount column.
+- Click the data type icon on the column header.
+- Select Decimal Number.
+- Confirm the data type change if prompted.
+- Check that the Order Amount column now shows the Decimal Number data type.
+- Click Close & Apply.
+- Create a simple aggregation such as Sum of Order Amount.
+- Verify that the values are treated as numbers.
+
+Result:
+
+- The Order Amount column was successfully changed from Text to Decimal Number.
+- The column can now be used for numerical calculations.
+
+
+Q5. Use Fill Down to fill missing Movie Name values based on the previous row's value.
+
+Ans:- Steps:
+
+- Open Power Query Editor.
+- Select the Movie Name column.
+- Check the column for blank or missing values.
+- Go to the Transform tab.
+- Click Fill.
+- Select Down.
+- Power Query will fill the blank cells using the previous non-blank value.
+- Check the Movie Name column.
+- Verify that the missing values have been filled correctly.
+
+Result:
+
+- The missing Movie Name values were successfully filled using the Fill Down operation.
+

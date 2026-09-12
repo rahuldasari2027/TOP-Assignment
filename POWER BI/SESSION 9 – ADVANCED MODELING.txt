@@ -1,0 +1,132 @@
+SESSION 9 – ADVANCED MODELING
+
+Q1. Import a sample IPL cricket match dataset and create a Model View showing relationships between Teams, Players, and Matches tables. Set up one relationship as inactive.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Import the IPL cricket match dataset.
+- Import the Teams table.
+- Import the Players table.
+- Import the Matches table.
+- Go to Model View.
+- Check the common fields between the tables.
+- Create a relationship between Teams and Matches using TeamID.
+- Create a relationship between Players and Matches using PlayerID.
+- Set one relationship as Inactive.
+- Double-click the relationship line.
+- Turn off the Make this relationship active option.
+- Click OK.
+- Check the inactive relationship in Model View.
+
+Result:
+
+- The Teams, Players, and Matches tables were successfully connected.
+- One relationship was set as inactive.
+- An inactive relationship can be useful when different relationships between tables are needed for different calculations.
+
+
+Q2. Change the cross filter direction between Matches and Players tables from Single to Both and observe how it affects filtering.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Go to Model View.
+- Select the relationship between Matches and Players.
+- Open the relationship settings.
+- Find the Cross filter direction option.
+- Change it from Single to Both.
+- Click OK.
+- Go to Report View.
+- Add a slicer or filter using a Match field.
+- Select a specific match.
+- Observe the player statistics.
+- Check how the selected match filters the Players table.
+
+Result:
+
+- The cross filter direction was successfully changed from Single to Both.
+- Filtering from the Matches table was able to affect the Players table.
+
+
+Q3. Hide PlayerEmail and PlayerPhone fields from Report View so that only relevant statistics are visible to users.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Go to Model View.
+- Select the Players table.
+- Find the PlayerEmail field.
+- Right-click on PlayerEmail.
+- Select Hide in report view.
+- Find the PlayerPhone field.
+- Right-click on PlayerPhone.
+- Select Hide in report view.
+- Go to Report View.
+- Check the Data/Fields Pane.
+- The hidden fields will not be available for report users.
+
+Result:
+
+- PlayerEmail and PlayerPhone were successfully hidden from Report View.
+- Only relevant player statistics are available for report creation.
+
+
+Q4. Add a calculated column to the Matches table that labels each match as High Scoring if total runs are above 200, otherwise Regular. Then create a measure for average runs per match.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Go to the Data View or Model View.
+- Select the Matches table.
+- Click the New Column option.
+- Enter the calculated column formula.
+
+Example:
+
+Match Type =
+IF(Matches[Total Runs] > 200, "High Scoring", "Regular")
+
+- Press Enter.
+- The new Match Type column will be created.
+- Click New Measure.
+- Create a measure for average runs per match.
+
+Example:
+
+Average Runs per Match =
+AVERAGE(Matches[Total Runs])
+
+- Press Enter.
+- Check the calculated column.
+- Check the measure.
+- Use the measure in a Card or other visual if required.
+
+Result:
+
+- A calculated column was created to classify matches as High Scoring or Regular.
+- A measure was created to calculate the average runs per match.
+
+
+Q5. Create a date hierarchy in the Matches table (Year > Month > Day) and use it to build a line chart showing the number of matches played over time.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Go to the Data View.
+- Select the Matches table.
+- Make sure the Match Date column has the Date data type.
+- In Report View, select a Line Chart.
+- Drag Match Date to the X-axis.
+- Select Date Hierarchy if Power BI provides the option.
+- Use the hierarchy levels Year, Month, and Day.
+- Drag Match ID to the Y-axis.
+- Change the aggregation to Count.
+- The line chart will show the number of matches played over time.
+- Use drill-down to move between Year, Month, and Day.
+
+Result:
+
+- A Date Hierarchy was created using Year, Month, and Day.
+- A line chart was successfully created to show the number of matches played over time.
+

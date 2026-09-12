@@ -1,0 +1,248 @@
+SESSION 16 – DATE, TIME & TEXT FUNCTIONS IN POWER BI (DAX)
+
+1. TODAY() FUNCTION
+What is TODAY()?
+TODAY() returns the current date according to the system date.
+
+Syntax:
+TODAY()
+
+Example:
+Today Date = TODAY()
+
+Practical use:
+- Days since an order
+- Age of a record
+- Days remaining
+- Current date comparisons
+
+Example:
+Days Since Order =
+DATEDIFF('Orders'[OrderDate], TODAY(), DAY)
+
+If Order Date = 20-Aug-2026 and Today = 24-Aug-2026, result = 4 days.
+
+
+2. NOW() FUNCTION
+What is NOW()?
+NOW() returns the current date and time.
+
+Syntax:
+NOW()
+
+Example:
+Current Date Time = NOW()
+
+Difference:
+TODAY() = Current date
+NOW() = Current date + time
+
+
+3. DATEDIFF() FUNCTION
+What is DATEDIFF()?
+DATEDIFF() calculates the difference between two dates.
+
+Syntax:
+DATEDIFF(<StartDate>, <EndDate>, <Interval>)
+
+Intervals:
+SECOND, MINUTE, HOUR, DAY, WEEK, MONTH, QUARTER, YEAR
+
+Example:
+Days Since Order =
+DATEDIFF('Orders'[OrderDate], TODAY(), DAY)
+
+Important:
+DATEDIFF(StartDate, EndDate, DAY)
+calculates the difference from Start Date to End Date.
+
+
+4. SAMEPERIODLASTYEAR()
+What is SAMEPERIODLASTYEAR()?
+It returns the same period from the previous year.
+
+Syntax:
+SAMEPERIODLASTYEAR('Date'[Date])
+
+It is mainly used for:
+- Current year vs previous year
+- Current month vs previous year
+- Current quarter vs previous year
+- Current sales vs previous year's sales
+
+Interview point:
+SAMEPERIODLASTYEAR() is generally used with a proper Date table and time-intelligence calculations.
+
+
+5. DATEADD()
+What is DATEADD()?
+DATEADD() shifts a date or date context forward or backward by a specified number of days, months, quarters, or years.
+
+Syntax:
+DATEADD(<Dates>, <NumberOfIntervals>, <Interval>)
+
+Examples:
+Previous Month =
+DATEADD('Date'[Date], -1, MONTH)
+
+Previous Year =
+DATEADD('Date'[Date], -1, YEAR)
+
+Next Month =
+DATEADD('Date'[Date], 1, MONTH)
+
+-1 means go backward.
+1 means go forward.
+
+
+6. PREVIOUS MONTH SALES USING DATEADD()
+
+First create:
+Total Sales =
+SUM('Orders'[Sales])
+
+Then:
+Previous Month Sales =
+CALCULATE(
+    [Total Sales],
+    DATEADD('Date'[Date], -1, MONTH)
+)
+
+CALCULATE() changes the filter context.
+DATEADD() moves the current date context one month backward.
+
+
+7. FORMAT() FUNCTION
+What is FORMAT()?
+FORMAT() converts a value into a specific text format.
+
+Syntax:
+FORMAT(<Value>, <FormatString>)
+
+Example:
+Formatted Date =
+FORMAT('Orders'[OrderDate], "dd-MMM-yyyy")
+
+For day name:
+Formatted Date =
+FORMAT('Orders'[OrderDate], "dd-MMM-yyyy, dddd")
+
+Example result:
+05-Jan-2023, Thursday
+
+Common format codes:
+dd = Day
+ddd = Short day
+dddd = Full day
+MM = Month number
+MMM = Short month
+MMMM = Full month
+yy = 2-digit year
+yyyy = 4-digit year
+
+
+8. LEFT() FUNCTION
+What is LEFT()?
+LEFT() extracts characters from the beginning/left side of a text value.
+
+Syntax:
+LEFT(<Text>, <NumberOfCharacters>)
+
+Example:
+Category Code =
+LEFT('Orders'[ProductCode], 3)
+
+If ProductCode = MOB1234IN
+Result = MOB
+
+
+9. RIGHT() FUNCTION
+What is RIGHT()?
+RIGHT() extracts characters from the end/right side of a text value.
+
+Syntax:
+RIGHT(<Text>, <NumberOfCharacters>)
+
+Example:
+Region Code =
+RIGHT('Orders'[ProductCode], 2)
+
+If ProductCode = MOB1234IN
+Result = IN
+
+
+10. LEFT() + RIGHT() PRACTICAL EXAMPLE
+
+Suppose ProductCode contains:
+MOB1234IN
+LAP5678US
+TVA9876UK
+
+Category Code =
+LEFT('Orders'[ProductCode], 3)
+
+Results:
+MOB1234IN -> MOB
+LAP5678US -> LAP
+TVA9876UK -> TVA
+
+Region Code =
+RIGHT('Orders'[ProductCode], 2)
+
+Results:
+MOB1234IN -> IN
+LAP5678US -> US
+TVA9876UK -> UK
+
+
+11. COMPLETE SESSION 16 FUNCTION SUMMARY
+
+TODAY() = Current date
+NOW() = Current date + time
+DATEDIFF() = Difference between dates
+SAMEPERIODLASTYEAR() = Same period previous year
+DATEADD() = Shift date period
+FORMAT() = Format value as text
+LEFT() = Extract from left
+RIGHT() = Extract from right
+
+
+12. IMPORTANT INTERVIEW QUESTIONS
+
+Q1. What is the difference between TODAY() and NOW()?
+Answer:
+TODAY() returns only the current date, while NOW() returns the current date and time.
+
+Q2. What is DATEDIFF() used for?
+Answer:
+DATEDIFF() calculates the difference between two dates based on an interval such as DAY, MONTH, QUARTER, or YEAR.
+
+Q3. What does DATEADD() do?
+Answer:
+DATEADD() shifts a date context forward or backward by a specified number of days, months, quarters, or years.
+
+Q4. What is SAMEPERIODLASTYEAR() used for?
+Answer:
+It is used for comparing the current period with the equivalent period from the previous year.
+
+Q5. What is FORMAT() used for?
+Answer:
+FORMAT() converts a value into a specified text format, such as displaying a date as 05-Jan-2023, Thursday.
+
+Q6. What is the difference between LEFT() and RIGHT()?
+Answer:
+LEFT() extracts characters from the beginning of a text string, while RIGHT() extracts characters from the end.
+
+EASY WAY TO REMEMBER
+
+Date & Time:
+TODAY -> Current Date
+NOW -> Current Date + Time
+DATEDIFF -> Difference
+DATEADD -> Add/Subtract Date
+SAMEPERIODLASTYEAR -> Previous Year
+
+Text:
+FORMAT -> Change Display Format
+LEFT -> Take Characters from Left
+RIGHT -> Take Characters from Right

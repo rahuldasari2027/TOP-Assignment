@@ -1,0 +1,121 @@
+SESSION 7 – COMBINING QUERIES
+
+Q1. Import two CSV files into Power BI: one with restaurants and another with customer reviews. Use Merge Queries with an Inner Join and create a table visual showing each restaurant's name and average rating.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Click on Get Data.
+- Select Text/CSV.
+- Select the restaurant CSV file.
+- Click Open.
+- Click Transform Data.
+- Load the restaurant table.
+- Import the customer reviews CSV file in the same way.
+- In Power Query Editor, select the restaurant table.
+- Click Home → Merge Queries.
+- Select the customer reviews table.
+- Select restaurant_id in the first table.
+- Select restaurant_id in the second table.
+- Select Inner Join as the Join Kind.
+- Click OK.
+- Expand the merged column.
+- Select the Rating column.
+- Click Close & Apply.
+- Go to Report View.
+- Select a Table visual.
+- Add Restaurant Name to the table.
+- Add Rating to the table.
+- Change the Rating aggregation to Average.
+
+Result:
+
+- The restaurant and customer review tables were successfully merged using Inner Join.
+- A table visual was created showing each restaurant's name and average rating.
+
+
+Q2. Use Append Queries to combine this month's Zomato orders and last month's orders. Create a summary showing total orders and total amount.
+
+Ans:- Steps:
+
+- Open Power Query Editor.
+- Load this month's Zomato orders table.
+- Load last month's Zomato orders table.
+- Make sure both tables have the same column structure.
+- Click on the Home tab.
+- Click Append Queries.
+- Select Two tables.
+- Select this month's orders as the first table.
+- Select last month's orders as the second table.
+- Click OK.
+- A new appended table will be created.
+- Check the combined data.
+- Click Close & Apply.
+- Go to Report View.
+- Add a Card visual for total orders.
+- Add Order ID and use Count or Count Distinct as required.
+- Add another Card visual for total amount.
+- Add Amount and use Sum.
+
+Result:
+
+- This month's and last month's orders were successfully combined using Append Queries.
+- A summary showing total orders and total amount was created.
+
+
+Q3. Combine multiple CSV files from a folder containing IPL match scores and create a bar chart showing total runs per team.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Click Get Data.
+- Select Folder.
+- Select the folder containing the IPL CSV files.
+- Click OK.
+- The list of files will be displayed.
+- Click Combine & Transform Data.
+- Power Query Editor will open.
+- Power BI will combine the files into one table.
+- Check the Match_ID, Team, and Runs columns.
+- Click Close & Apply.
+- Go to Report View.
+- Select a Bar Chart.
+- Drag Team to the Axis.
+- Drag Runs to the Values.
+- Make sure Runs is summarized as Sum.
+
+Result:
+
+- Multiple IPL CSV files were successfully combined from the folder.
+- A bar chart showing total runs per team was created.
+
+
+Q4. Open Query Dependencies View and take a screenshot showing how the queries are connected. Explain what the arrows and boxes represent.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Click Transform Data.
+- Power Query Editor will open.
+- Go to the View tab.
+- Click Query Dependencies.
+- The Query Dependencies view will appear.
+- Observe the boxes representing the queries.
+- Observe the arrows connecting the queries.
+- Take a screenshot of the Query Dependencies view.
+
+Explanation:
+
+- Each box represents a query or table in Power Query.
+- The arrows show the dependency or flow between queries.
+- Merge creates a dependency between the queries being joined.
+- Append combines data from multiple queries into one query.
+- Combine Files from Folder creates a connection between the folder source and the combined data query.
+
+Result:
+
+- Query Dependencies View was successfully opened.
+- The relationships and flow between the queries were observed.

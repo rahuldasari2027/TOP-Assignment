@@ -1,0 +1,113 @@
+SESSION 3 – CONNECTING TO DATA SOURCES
+
+Q1. Connect Power BI to an Excel file containing your favorite restaurants and load the data using Import mode.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Click on Get Data.
+- Select Excel Workbook.
+- Select the Favorite Restaurants Excel file.
+- Click Open.
+- The Navigator window will appear.
+- Select the required Sheet/Table.
+- Check the data preview.
+- Click Load.
+- The data will be imported into Power BI.
+- Check the table in the Data/Fields Pane.
+- The table will contain fields such as Restaurant Name, Cuisine, and Rating.
+
+Result:
+
+- The Excel file was successfully connected to Power BI.
+- The restaurant data was successfully loaded using Import mode.
+
+
+Q2. Connect Power BI to a CSV file containing sales data and load it into Power BI.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Click on Get Data.
+- Select Text/CSV.
+- Select the required CSV file.
+- Click Open.
+- The data preview window will appear.
+- Check the columns and data.
+- Click Load.
+- The CSV data will be loaded into Power BI.
+- Check the imported table in the Data/Fields Pane.
+
+Result:
+
+- The CSV file was successfully connected to Power BI.
+- The sales data was successfully loaded into Power BI.
+
+
+Q3. Connect Power BI to a SQL Server database and select a table to import.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Click on Get Data.
+- Select SQL Server.
+- Enter the Server Name.
+- Enter the Database Name if required.
+- Select the required connection option.
+- Click OK.
+- Enter the required login details.
+- Click Connect.
+- The Navigator window will appear.
+- Select the required database table.
+- Check the data preview.
+- Click Load.
+- The SQL table will be imported into Power BI.
+
+Result:
+
+- Power BI was successfully connected to the SQL Server database.
+- The selected table was successfully imported.
+
+
+Q4. Explore different data sources available in Power BI and identify at least five sources.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Go to the Home tab.
+- Click on Get Data.
+- Explore the available data sources.
+- Identify different types of data sources.
+- Note down at least five data sources.
+
+Examples:
+
+- Excel Workbook
+- Text/CSV
+- SQL Server
+- Web
+- Microsoft Access
+- MySQL Database
+- Oracle Database
+
+Result:
+
+- Different data sources available in Power BI were explored.
+- At least five data sources were identified.
+
+
+Q5. Understand the difference between Import Mode and DirectQuery Mode.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Connect to a supported data source.
+- Select the required table.
+- Observe the available storage/connectivity options.
+- Import Mode loads a copy of the data into Power BI.
+- DirectQuery Mode keeps the data in the original source and sends queries to the source when data is needed.
+- Import Mode generally provides faster report interaction for many scenarios.
+- DirectQuery is useful when data needs to remain in the source or when importing the full dataset is not suitable.

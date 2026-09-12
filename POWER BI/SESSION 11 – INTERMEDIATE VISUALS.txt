@@ -1,0 +1,96 @@
+SESSION 11 – INTERMEDIATE VISUALS
+
+Q1. Import a CSV file containing monthly step count data and create a Line Chart to show the trend of steps over the months.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Click on Get Data.
+- Select Text/CSV.
+- Select the monthly step count CSV file.
+- Click Open.
+- Click Load or Transform Data.
+- Go to Report View.
+- Select the Line Chart visual.
+- Drag Month into the X-axis.
+- Drag Steps into the Y-axis.
+- Check the line chart.
+- Turn on Data Labels if required.
+- Add a suitable title such as Monthly Steps Trend.
+
+Result:
+
+- A Line Chart was successfully created.
+- The chart shows the trend of steps over the months.
+
+
+Q2. Using a food delivery orders dataset, create a Pie Chart showing the share of orders for each restaurant and customize the legend to show percentage values.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the food delivery orders dataset.
+- Go to Report View.
+- Select the Pie Chart visual.
+- Drag Restaurant into Legend.
+- Drag OrderCount into Values.
+- Check that OrderCount is summarized as Sum.
+- Open the Format pane.
+- Turn on Detail Labels or Data Labels.
+- Select Percentage of total if available.
+- Customize the legend position if required.
+- Add a suitable title such as Restaurant Order Share.
+
+Result:
+
+- A Pie Chart was successfully created.
+- The chart shows the share of orders for each restaurant using percentage values.
+
+
+Q3. Import daily active user data for Instagram, WhatsApp, and YouTube and create an Area Chart showing usage patterns over a two-week period.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on Get Data.
+- Import the daily active user dataset.
+- Make sure the Date column has the Date data type.
+- Go to Report View.
+- Select the Area Chart visual.
+- Drag Date into the X-axis.
+- Drag Instagram into the Y-axis.
+- Drag WhatsApp into the Y-axis.
+- Drag YouTube into the Y-axis.
+- Check the three area series.
+- Format the X-axis and data labels if required.
+- Add a suitable title such as Daily Active Users.
+
+Result:
+
+- An Area Chart was successfully created.
+- The chart shows usage patterns of Instagram, WhatsApp, and YouTube over two weeks.
+
+
+Q4. Build a Combo Chart using monthly Zomato orders where TotalOrders is shown as columns and AverageOrderValue is shown as a line.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the monthly Zomato orders dataset.
+- Make sure the Month column is correctly recognized.
+- Go to Report View.
+- Select the Line and Clustered Column Chart visual.
+- Drag Month into the X-axis.
+- Drag TotalOrders into the Column Y-axis.
+- Drag AverageOrderValue into the Line Y-axis.
+- Check that TotalOrders is summarized correctly.
+- Check that AverageOrderValue is summarized as Average if required by the dataset.
+- Turn on Data Labels if required.
+- Add a suitable title such as Monthly Orders and Average Order Value.
+
+Result:
+
+- A Combo Chart was successfully created.
+- TotalOrders is displayed as columns.
+- AverageOrderValue is displayed as a line on the same chart.

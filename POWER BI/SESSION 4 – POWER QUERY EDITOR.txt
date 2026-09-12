@@ -1,0 +1,100 @@
+SESSION 4 – POWER QUERY EDITOR (PQE)
+
+Q1. Open Power Query Editor (PQE) in Power BI and load a sample dataset of IPL cricket matches.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Click on Get Data.
+- Select Text/CSV.
+- Select the IPL cricket matches CSV file.
+- Click Open.
+- Check the data preview.
+- Click Transform Data.
+- Power Query Editor will open.
+- Check the columns and rows of the dataset.
+
+Result:
+
+- The IPL dataset was successfully loaded into Power Query Editor.
+- The data was ready for cleaning and transformation.
+
+
+Q2. In PQE, remove all columns except Team 1, Team 2, Winner, and Venue.
+
+Ans:- Steps:
+
+- Open Power Query Editor.
+- Select the IPL matches table.
+- Find the Team 1 column.
+- Hold Ctrl and select Team 2.
+- Select Winner.
+- Select Venue.
+- Right-click on any selected column.
+- Select Remove Other Columns.
+- Only Team 1, Team 2, Winner, and Venue columns will remain.
+
+Result:
+
+- All unnecessary columns were removed.
+- Only Team 1, Team 2, Winner, and Venue columns remained.
+
+
+Q3. Delete the first 2 rows and remove rows where the Winner column is null or empty.
+
+Ans:- Steps:
+
+- Open Power Query Editor.
+- Go to the Home tab.
+- Click on Remove Rows.
+- Select Remove Top Rows.
+- Enter 2.
+- Click OK.
+- The first two rows will be removed.
+- Select the Winner column.
+- Click the filter dropdown.
+- Uncheck null or blank values.
+- Click OK.
+- Rows with missing Winner values will be removed.
+
+Result:
+
+- The first two rows were removed.
+- Rows with null or empty values in the Winner column were removed.
+
+
+Q4. Find and remove duplicate rows in the IPL dataset based on Team 1, Team 2, and Venue columns.
+
+Ans:- Steps:
+
+- Open Power Query Editor.
+- Select the Team 1 column.
+- Hold Ctrl and select Team 2.
+- Hold Ctrl and select Venue.
+- Right-click on one of the selected columns.
+- Select Remove Duplicates.
+- Power Query will check the selected columns.
+- Duplicate combinations will be removed.
+- The first occurrence of each combination will be kept.
+
+Result:
+
+- Duplicate rows based on Team 1, Team 2, and Venue were successfully removed.
+
+
+Q5. Handle error rows by replacing errors in the Winner column with the value Unknown, then load the cleaned data to Power BI.
+
+Ans:- Steps:
+
+- Open Power Query Editor.
+- Select the Winner column.
+- Right-click on the Winner column.
+- Select Replace Errors.
+- Enter Unknown.
+- Click OK.
+- All errors in the Winner column will be replaced with Unknown.
+- Check the cleaned data.
+- Click on the Home tab.
+- Click Close & Apply.
+- The cleaned data will be loaded into Power BI.

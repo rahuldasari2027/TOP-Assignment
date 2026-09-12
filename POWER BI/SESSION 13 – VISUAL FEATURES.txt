@@ -1,0 +1,134 @@
+SESSION 13 – VISUAL FEATURES
+
+Q1. Import an IPL cricket match dataset and create a bar chart showing total runs by team. Enable drill-down so that clicking on a team reveals runs by individual players.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on Get Data.
+- Import the IPL cricket match dataset.
+- Go to Report View.
+- Select a Bar Chart.
+- Drag Team Name into the Axis.
+- Drag Runs into Values.
+- Create a hierarchy using Team Name and Player Name.
+- Add Player Name below Team Name in the hierarchy.
+- Add the hierarchy to the chart Axis.
+- Turn on the Drill Down option on the visual.
+- Click on a team in the chart.
+- The chart will drill down and show individual players.
+- Check the total runs for each player.
+
+Result:
+
+- A bar chart was successfully created.
+- Drill-down was enabled to move from Team level to Player level.
+
+
+Q2. Create a movie hierarchy using Genre > Year > Movie Title and build a visual that allows users to drill through these levels.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the movie dataset.
+- Go to the Data or Model View.
+- Create a hierarchy using the movie fields.
+- Add Genre as the first level.
+- Add Year as the second level.
+- Add Movie Title as the third level.
+- Rename the hierarchy if required.
+- Go to Report View.
+- Select a Column Chart or Bar Chart.
+- Add the hierarchy to the Axis.
+- Add Box Office Collection to Values.
+- Use the Drill Down button to move from Genre to Year and then Movie Title.
+- Check the box office collection at each level.
+
+Result:
+
+- A Genre > Year > Movie Title hierarchy was successfully created.
+- Users can drill down through the hierarchy to analyze box office collections.
+
+
+Q3. Apply conditional formatting to a table showing restaurant ratings so that ratings above 4.5 are green, between 3 and 4.5 are yellow, and below 3 are red.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the restaurant ratings dataset.
+- Go to Report View.
+- Select a Table visual.
+- Drag Restaurant Name into the table.
+- Drag Rating into the table.
+- Open the formatting options for the Rating field.
+- Select Conditional Formatting.
+- Select Background Color or Font Color.
+- Choose Rules.
+- Set the first rule for Rating greater than 4.5.
+- Set the color as Green.
+- Set the second rule for Rating between 3 and 4.5.
+- Set the color as Yellow.
+- Set the third rule for Rating below 3.
+- Set the color as Red.
+- Click Apply.
+
+Result:
+
+- Conditional formatting was successfully applied.
+- Ratings above 4.5 appear in green.
+- Ratings between 3 and 4.5 appear in yellow.
+- Ratings below 3 appear in red.
+
+
+Q4. Add a custom visual from the Power BI Marketplace and use it to visualize frequently ordered food items.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Go to Report View.
+- Open the Visualizations pane.
+- Click Get more visuals or the three dots.
+- Select AppSource/Power BI visuals.
+- Search for a visual such as Word Cloud or Bullet Chart.
+- Select the required custom visual.
+- Click Add.
+- The visual will appear in the Visualizations pane.
+- Select the custom visual.
+- Drag Food Item into the required field.
+- Drag Order Count into the Values or Size field.
+- Check the visualization.
+- Format the visual if required.
+
+Result:
+
+- A custom visual was successfully added from the Power BI Marketplace.
+- The visual was used to show frequently ordered food items.
+
+
+Q5. Use ChatGPT to help write a DAX formula that calculates the average delivery time per city from a Flipkart orders dataset, then apply the measure to a visual.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the Flipkart orders dataset.
+- Make sure the dataset contains City and Delivery Time fields.
+- Go to the Modeling tab.
+- Click New Measure.
+- Create the following DAX measure:
+
+Average Delivery Time =
+AVERAGE(Orders[Delivery Time])
+
+- Press Enter.
+- Go to Report View.
+- Select a Column Chart or Bar Chart.
+- Drag City into the Axis.
+- Drag Average Delivery Time into Values.
+- Check the visual.
+- Format the title and data labels if required.
+
+Result:
+
+- A DAX measure for Average Delivery Time was successfully created.
+- The measure was applied to a visual to compare average delivery time by city.
+

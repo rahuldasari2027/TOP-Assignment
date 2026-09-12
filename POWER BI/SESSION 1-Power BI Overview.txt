@@ -1,0 +1,67 @@
+Session 1 – Power BI Overview
+Q1. Download and install Power BI Desktop, then open the application and take a screenshot of the blank report interface.
+
+Ans:- Steps:
+
+Open Power BI Desktop.
+Click on Blank Report.
+The blank report interface will open.
+Take a screenshot of the Power BI Desktop interface.
+
+Result:
+
+Power BI Desktop was opened successfully and the blank report interface was displayed.
+
+Q2. Explore the Power BI Desktop interface and identify Report View, Data View, Model View, Fields Pane, Visualizations Pane, and Filters Pane.
+
+Ans:- Steps:
+
+Report View: Used to create reports and different charts.
+
+Data View: Used to see the data in rows and columns.
+
+Model View: Used to see and create relationships between tables.
+
+Fields Pane: Shows tables, columns, and measures.
+
+Visualizations Pane: Used to create and format charts and other visuals.
+
+Filters Pane: Used to apply filters to the data.
+
+Result:
+
+All the main components of the Power BI Desktop interface were identified and their uses were understood.
+
+Q3. Create a new blank report and add a table visual using the Visualizations Pane. Rename the report page to 'My First Dashboard'.
+
+Ans:- Steps:
+
+Open Power BI Desktop.
+Create a Blank Report.
+Right-click on Page 1.
+Click Rename.
+Enter My First Dashboard.
+Go to the Visualizations Pane.
+Select the Table visual.
+The table visual was added to the report page.
+
+Result:
+
+A blank report was created, the page was renamed to My First Dashboard, and a table visual was added successfully.
+
+Q4. List 3 key differences between Excel Dashboards and Power BI Dashboards.
+
+Ans:-
+
+1. Interactivity:
+Power BI dashboards are more interactive and provide features like filters, slicers, and drill-down.
+
+2. Data Modeling:
+Power BI can connect multiple tables using relationships, while Excel mainly uses worksheets and PivotTables.
+
+3. Visualization:
+Power BI provides many interactive charts and visuals, while Excel mainly uses charts and PivotCharts.
+
+Result:
+
+Three main differences between Excel dashboards and Power BI dashboards were identified.

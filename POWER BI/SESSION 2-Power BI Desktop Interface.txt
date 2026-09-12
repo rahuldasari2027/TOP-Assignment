@@ -1,0 +1,125 @@
+SESSION 2 – POWER BI DESKTOP INTERFACE
+
+Q1. Open Power BI Desktop, load the provided Sample Data Excel file, and switch between Report View, Data View, and Model View.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Click on Get Data.
+- Select Excel Workbook.
+- Select the provided Sample Data Excel file.
+- Click Open.
+- Select the required Sheet/Table.
+- Click Load.
+- Wait for the data to load.
+- Click Report View from the left side.
+- Observe the report canvas.
+- Click Data View from the left side.
+- Observe the data in rows and columns.
+- Click Model View from the left side.
+- Observe the tables and relationships.
+
+Result:
+
+- The Sample Data Excel file was successfully loaded.
+- Report View, Data View, and Model View were successfully explored.
+
+
+Q2. In Report View, use the Fields Pane to drag any two different fields onto the canvas and create two separate visualizations.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Go to Report View.
+- Open the Data/Fields Pane.
+- Select the required table.
+- Select a field from the table.
+- Select a Bar Chart from the Visualizations Pane.
+- Drag the required field into the chart.
+- Select another field from the Data/Fields Pane.
+- Click on an empty area of the report canvas.
+- Select a Pie Chart.
+- Drag the required field into the Pie Chart.
+- Arrange both visualizations on the report canvas.
+
+Result:
+
+- A Bar Chart was successfully created.
+- A Pie Chart was successfully created.
+- Two separate visualizations were added to the report.
+
+
+Q3. Use the Filters Pane in Report View to add a filter that only shows data for a specific value.
+
+Ans:- Steps:
+
+- Open Report View.
+- Select the required visual.
+- Open the Filters Pane.
+- Select a field such as Category.
+- Drag the field into Filters on this visual.
+- Open the filter dropdown.
+- Select one specific value.
+- For example, select Technology.
+- Remove the other values if required.
+- Check the visual.
+- The visual will update according to the selected filter.
+
+Result:
+
+- A filter was successfully applied.
+- The visual displayed data only for the selected value.
+
+
+Q4. Explore the Ribbon commands under the Home and Insert tabs, add a new page to the report, and insert a text box with your name on it.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Explore the commands available under Home.
+- Click on the Insert tab.
+- Explore the commands available under Insert.
+- Go to the bottom of the report.
+- Click on the + button.
+- A new report page will be created.
+- Go to the Insert tab.
+- Click on Text Box.
+- A text box will appear on the report canvas.
+- Click inside the text box.
+- Enter your name.
+- Adjust the size of the text box.
+- Move the text box to a suitable position.
+
+Result:
+
+- The Home and Insert tabs were explored.
+- A new report page was successfully created.
+- A text box containing my name was successfully added.
+
+
+Q5. Switch to Model View and use the Visualizations Pane to check relationships between tables, then rename one field in the Fields Pane.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on Model View from the left side.
+- Observe the tables in Model View.
+- Check the relationship lines between the tables.
+- Click on a relationship line if available.
+- Check the connected fields.
+- Go back to Data View.
+- Open the Data/Fields Pane.
+- Select a field that needs to be renamed.
+- Right-click on the field.
+- Select Rename.
+- Enter a new readable name.
+- For example, change Cust_ID to Customer ID.
+- Press Enter.
+- Check the renamed field in the Data/Fields Pane.
+
+Result:
+
+- The table relationships were successfully checked.
+- A field was successfully renamed to make it more readable.

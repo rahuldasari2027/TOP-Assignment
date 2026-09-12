@@ -1,0 +1,127 @@
+SESSION 6 – TRANSFORMATIONS
+
+Q1. Import a CSV file containing food delivery orders and use Unpivot Columns to convert Month1, Month2, and Month3 into Month and OrderCount columns.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Click on Get Data.
+- Select Text/CSV.
+- Select the food delivery orders CSV file.
+- Click Open.
+- Click Transform Data.
+- Power Query Editor will open.
+- Select the OrderID, Restaurant, FoodItem, Month1, Month2, and Month3 columns.
+- Select the Month1, Month2, and Month3 columns.
+- Right-click on the selected columns.
+- Select Unpivot Columns.
+- Power Query will create two new columns.
+- Rename Attribute as Month.
+- Rename Value as OrderCount.
+- Check the transformed data.
+
+Result:
+
+- The Month1, Month2, and Month3 columns were successfully converted into Month and OrderCount columns.
+
+
+Q2. Use Group By transformation on a Flipkart product sales dataset to calculate the total sales amount for each product category and display the result in a new table.
+
+Ans:- Steps:
+
+- Open Power Query Editor.
+- Load the Flipkart product sales dataset.
+- Select the Product Category column.
+- Go to the Home tab.
+- Click Group By.
+- Select Advanced if required.
+- Select Product Category as the grouping column.
+- Select the Sales Amount column.
+- Choose Sum as the operation.
+- Enter a new column name such as Total Sales.
+- Click OK.
+- Check the grouped result.
+
+Result:
+
+- The data was grouped by Product Category.
+- Total Sales was calculated for each product category.
+- The grouped result was displayed in a new table.
+
+
+Q3. Add a Custom Column in Power Query Editor to combine Artist and SongTitle into a DisplayName column formatted as Artist - SongTitle.
+
+Ans:- Steps:
+
+- Open Power Query Editor.
+- Load the Spotify-style playlist dataset.
+- Go to the Add Column tab.
+- Click Custom Column.
+- Enter DisplayName as the new column name.
+- Enter the custom formula using Artist and SongTitle.
+- Use the format Artist - SongTitle.
+- Click OK.
+- Check the new DisplayName column.
+
+Example:
+
+- Artist = Arijit Singh
+- SongTitle = Tum Hi Ho
+- DisplayName = Arijit Singh - Tum Hi Ho
+
+Result:
+
+- A new DisplayName column was successfully created.
+- Artist and SongTitle were combined in the required format.
+
+
+Q4. Create a Conditional Column for a Zomato restaurant ratings dataset that assigns Status based on the rating.
+
+Ans:- Steps:
+
+- Open Power Query Editor.
+- Load the Zomato restaurant ratings dataset.
+- Go to the Add Column tab.
+- Click Conditional Column.
+- Enter Status as the new column name.
+- Select the Rating column.
+- Set the first condition as Rating greater than 4.5.
+- Enter Top Rated as the output.
+- Add another condition.
+- Set the condition for Rating between 3 and 4.5.
+- Enter Average as the output.
+- Set the final condition for Rating below 3.
+- Enter Needs Improvement as the output.
+- Click OK.
+- Check the new Status column.
+
+Result:
+
+- A Conditional Column named Status was successfully created.
+- Restaurants were classified as Top Rated, Average, or Needs Improvement based on their ratings.
+
+
+Q5. Use Power Query Editor's Add Column from Examples feature to generate a MovieKeyword column that extracts the first word from each movie title.
+
+Ans:- Steps:
+
+- Open Power Query Editor.
+- Load the BookMyShow movie bookings dataset.
+- Select the Movie Title column.
+- Go to the Add Column tab.
+- Click Column From Examples.
+- Select From Selection if required.
+- Enter the expected first word for a few movie titles.
+- Power BI will detect the transformation pattern.
+- Check the suggested MovieKeyword column.
+- Enter MovieKeyword as the column name.
+- Click OK.
+- Verify that the first word is extracted from each movie title.
+
+Result:
+
+- A new MovieKeyword column was successfully created.
+- The first word from each movie title was extracted using Add Column from Examples.
+
+

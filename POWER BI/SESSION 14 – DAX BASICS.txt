@@ -1,0 +1,140 @@
+SESSION 14 – DAX BASICS
+
+Q1. Create a calculated column named OrderAmountINR in a Sales table that multiplies OrderAmount by 83 to convert USD to INR.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the Sales table.
+- Go to the Data or Model View.
+- Select the Sales table.
+- Click the Modeling tab.
+- Click New Column.
+- Enter the following DAX formula:
+
+OrderAmountINR = Sales[OrderAmount] * 83
+
+- Press Enter.
+- A new calculated column named OrderAmountINR will be created.
+- Check the calculated values.
+
+Result:
+
+- The OrderAmountINR calculated column was successfully created.
+- The USD order amount was converted to INR using the rate of 83.
+
+
+Q2. Build a DAX measure called TotalLikes that sums the Likes column in a SocialPosts table.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Select the SocialPosts table.
+- Go to the Modeling tab.
+- Click New Measure.
+- Enter the following DAX formula:
+
+TotalLikes = SUM(SocialPosts[Likes])
+
+- Press Enter.
+- The TotalLikes measure will be created.
+- Go to Report View.
+- Select a Card visual.
+- Drag TotalLikes into the Card.
+- Check the total likes.
+
+Result:
+
+- The TotalLikes measure was successfully created.
+- The Card visual displays the total number of likes.
+
+
+Q3. Create a slicer for Genre in a Movies table and use a DAX measure to display the average UserRating for the selected genre.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the Movies table.
+- Go to the Modeling tab.
+- Click New Measure.
+- Enter the following DAX formula:
+
+Average User Rating = AVERAGE(Movies[UserRating])
+
+- Press Enter.
+- Go to Report View.
+- Select a Slicer visual.
+- Drag Genre into the slicer.
+- Select a Card visual.
+- Drag Average User Rating into the Card.
+- Select a genre from the slicer.
+- Observe the average UserRating for the selected genre.
+
+Result:
+
+- A Genre slicer was successfully created.
+- The average UserRating changes according to the selected genre.
+
+
+Q4. Compare calculated columns and measures by creating DiscountedPrice and TotalDiscountedSales in a Flipkart-style Products table.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the Products table.
+- Select the Products table.
+- Click Modeling → New Column.
+- Enter the following DAX formula:
+
+DiscountedPrice = Products[Price] - Products[Discount]
+
+- Press Enter.
+- A calculated column named DiscountedPrice will be created.
+- Click Modeling → New Measure.
+- Enter the following DAX formula:
+
+TotalDiscountedSales = SUM(Products[DiscountedPrice])
+
+- Press Enter.
+- Go to Report View.
+- Add a Card visual.
+- Drag TotalDiscountedSales into the Card.
+- Add a slicer using a suitable field such as Category.
+- Select different categories.
+- Observe how the measure responds to the filter.
+
+Comparison:
+
+- A calculated column calculates a value row by row and stores the result in the table.
+- A measure calculates a result when it is used in a visual and responds to filters and slicers.
+- DiscountedPrice is a calculated column.
+- TotalDiscountedSales is a measure.
+
+Result:
+
+- Both a calculated column and a measure were successfully created.
+- The difference between calculated columns and measures was observed using filters and slicers.
+
+
+Q5. List the DAX data types used in the above tasks and give a real-world example for each type.
+
+Ans:- Steps:
+
+- Review the calculated columns and measures created in the previous tasks.
+- Identify the data types used by the columns.
+- Note the common DAX data types.
+
+Examples:
+
+- Whole Number – Example: Order ID, User ID, Number of Likes.
+- Decimal Number – Example: Restaurant Rating, Order Amount, Product Price.
+- Currency – Example: Order Amount, Product Price, Sales Amount.
+- Text – Example: Genre, Movie Name, Restaurant Name.
+- Date/Time – Example: Order Date, Movie Release Date.
+- Boolean – Example: IsActive, IsDelivered.
+
+Result:
+
+- The main DAX data types used in the tasks were identified.
+- Real-world examples were provided for each data type.
+

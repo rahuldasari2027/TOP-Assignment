@@ -1,0 +1,129 @@
+SESSION 10 – BASIC VISUALS
+
+Q1. Import a sample dataset of IPL cricket matches into Power BI and create a Table visual that displays Team Name, Runs Scored, and Match Date.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Click on the Home tab.
+- Click on Get Data.
+- Select the required IPL cricket match dataset.
+- Load the data into Power BI.
+- Go to Report View.
+- Select the Table visual from the Visualizations pane.
+- Drag Team Name into the table.
+- Drag Runs Scored into the table.
+- Drag Match Date into the table.
+- Check the table visual.
+- Format the visual if required.
+
+Result:
+
+- A Table visual was successfully created.
+- The table displays Team Name, Runs Scored, and Match Date.
+
+
+Q2. Using a Zomato restaurant ratings dataset, create a Matrix visual showing average rating per City and Cuisine type.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the Zomato restaurant ratings dataset.
+- Go to Report View.
+- Select the Matrix visual.
+- Drag City into Rows.
+- Drag Cuisine into Columns.
+- Drag Rating into Values.
+- Click the dropdown beside Rating.
+- Select Average.
+- Check the Matrix visual.
+- Format the Matrix if required.
+
+Result:
+
+- A Matrix visual was successfully created.
+- It shows the average restaurant rating by City and Cuisine type.
+
+
+Q3. Create a Card visual displaying the total number of active users from a Flipkart user data file.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the Flipkart user dataset.
+- Go to Report View.
+- Select the Card visual.
+- Drag the User ID field into the Card.
+- Change the aggregation to Count or Distinct Count as required.
+- If there is an Active Status field, apply a filter for Active users.
+- Check the Card visual.
+- Format the Card title and display if required.
+
+Result:
+
+- A Card visual was successfully created.
+- It displays the total number of active users.
+
+
+Q4. Build a KPI visual that tracks the monthly increase in Spotify premium subscriptions and shows whether the current month's number is higher or lower than the previous month.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the Spotify subscription dataset.
+- Make sure the subscription date field has the Date data type.
+- Create a measure for total premium subscriptions.
+
+Example:
+
+Total Premium Subscriptions =
+COUNTROWS(Spotify)
+
+- Create a previous month measure if required.
+
+Example:
+
+Previous Month Subscriptions =
+CALCULATE(
+    [Total Premium Subscriptions],
+    DATEADD(Spotify[Date], -1, MONTH)
+)
+
+- Go to Report View.
+- Select the KPI visual.
+- Drag the subscription measure into Indicator.
+- Drag Date into Trend axis.
+- Use the previous month value for comparison if required.
+- Check the KPI visual.
+- Format the KPI title and values.
+
+Result:
+
+- A KPI visual was successfully created.
+- It shows the subscription trend over time and helps identify whether the current month's subscriptions are higher or lower than the previous month.
+
+
+Q5. Create a Bar or Column chart comparing ticket sales for the Top 5 movies using a Top N filter.
+
+Ans:- Steps:
+
+- Open Power BI Desktop.
+- Load the BookMyShow movie bookings dataset.
+- Go to Report View.
+- Select a Clustered Column Chart or Bar Chart.
+- Drag Movie Name into the Axis.
+- Drag Ticket Sales into Values.
+- Open the Filters pane.
+- Select the Movie Name field under Filters on this visual.
+- Change the filter type to Top N.
+- Enter 5 in the Show items field.
+- Select Ticket Sales as the By value field.
+- Click Apply filter.
+- The visual will display only the Top 5 movies by ticket sales.
+- Add data labels if required.
+- Give the chart a suitable title such as Top 5 Movies by Ticket Sales.
+
+Result:
+
+- A Bar/Column chart was successfully created.
+- The chart displays the Top 5 movies based on ticket sales.
