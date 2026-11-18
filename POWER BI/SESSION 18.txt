@@ -1,0 +1,192 @@
+Session 18 – Filters & Slicers, Page, Visual, Report Level Filters, Sync Slicers, Navigation Using Bookmarks and Buttons
+
+1. Introduction to Filters in Power BI
+
+A filter in Power BI is used to display specific data based on selected conditions. Filters help users focus on important information and remove unnecessary data from reports.
+
+Power BI provides three main types of filters:
+Report-Level Filters
+Page-Level Filters
+Visual-Level Filters
+
+2. Report-Level Filters
+Definition:
+A Report-Level Filter is a filter that applies to all pages in a Power BI report. It helps users maintain the same filtering conditions throughout the entire report.
+
+Example:
+If we apply a filter on distance_km to show trips greater than or equal to 2 km, the condition will apply to all pages of the report.
+
+Uses:
+Filters data across all report pages.
+Maintains consistency throughout the report.
+Helps analyse specific information.
+
+3. Page-Level Filters
+Definition:
+A Page-Level Filter is used to filter data on a particular report page. It does not directly affect other pages in the report.
+
+Example:
+If we apply a payment_mode filter and select UPI on the Trips page, only UPI transactions will be displayed on that page.
+
+Uses:
+Filters data on a selected page.
+Helps create page-specific reports.
+Allows different pages to display different information.
+
+4. Visual-Level Filters
+Definition:
+A Visual-Level Filter applies only to a selected visual, such as a table, card, bar chart, or pie chart.
+
+Example:
+If we apply a Top 10 filter on the fare_inr column of a table, the table will display only the ten highest fare records.
+
+Uses:
+Filters individual charts and tables.
+Helps display selected information.
+Makes data analysis more specific.
+
+5. Difference Between Report, Page and Visual-Level Filters
+Filter Type
+Description
+Report-Level Filter
+Applies to all report pages.
+Page-Level Filter
+Applies to one selected page.
+Visual-Level Filter
+Applies to one selected visual.
+
+6. Slicers in Power BI
+
+Definition:
+
+A Slicer is an interactive visual in Power BI that allows users to filter report data by selecting specific values.
+
+Slicers make reports interactive and user-friendly.
+
+Example:
+
+In a Rickshaw Trips report, we can create slicers for Zone and Payment Mode. Users can select North, South, East, West, Central, Cash, UPI, or Card to filter the data.
+
+Uses:
+
+Filters data interactively.
+
+Makes dashboards user-friendly.
+
+Allows users to select specific categories.
+
+Helps analyse data based on different conditions.
+
+7. Sync Slicers in Power BI
+
+Definition:
+
+Sync Slicers is a feature in Power BI that allows the same slicer selection to be applied across multiple report pages.
+
+It helps maintain consistent filtering between different pages.
+
+Example:
+
+Suppose a report contains two pages named Trips and Fares. If a user selects North in the Zone slicer on the Trips page, the same selection can also filter the Fares page.
+
+Uses:
+
+Synchronizes slicer selections across pages.
+
+Maintains consistent filtering.
+
+Saves time when analysing multiple pages.
+
+Improves report navigation.
+
+8. Bookmarks in Power BI
+
+Definition:
+
+A Bookmark in Power BI saves the current state of a report page, including filters, slicer selections, and visual visibility, depending on its settings.
+
+Bookmarks are useful for creating interactive reports and switching between different report views.
+
+Example:
+
+In a Rickshaw Trips report, we can create two bookmarks:
+
+show_cash – Displays Cash transactions.
+
+show_upi – Displays UPI transactions.
+
+Uses:
+
+Saves report views.
+
+Helps switch between different report states.
+
+Creates interactive dashboards.
+
+Allows users to view specific information quickly.
+
+9. Buttons in Power BI
+
+Definition:
+
+A Button in Power BI is an interactive element that performs a specific action when clicked.
+
+Buttons can be connected to bookmarks, page navigation, web URLs, and other supported actions.
+
+Example:
+
+We can create two buttons named Cash and UPI. The Cash button activates the show_cash bookmark, while the UPI button activates the show_upi bookmark.
+
+Uses:
+
+Provides easy navigation.
+
+Activates bookmarks.
+
+Makes reports interactive.
+
+Improves the user experience.
+
+10. Page Navigator in Power BI
+
+Definition:
+
+A Page Navigator is a built-in navigation feature in Power BI that allows users to move between different report pages by clicking buttons.
+
+It automatically displays the available report pages.
+
+Example:
+
+If a report contains Trips and Fares pages, a Page Navigator allows users to switch between these pages easily.
+
+Uses:
+
+Helps navigate between report pages.
+
+Makes reports easier to use.
+
+Saves time when switching pages.
+
+Provides professional report navigation.
+
+11. Difference Between Filters and Slicers
+
+Filters
+
+Slicers
+
+Filters are mainly managed through the Filters pane.
+
+Slicers are displayed directly on the report canvas.
+
+Can be applied at report, page, and visual levels.
+
+Allow interactive filtering through selections.
+
+Can include advanced filtering conditions.
+
+Usually allow users to select values visually.
+
+Useful for controlling report data.
+
+Useful for user-friendly dashboards.
