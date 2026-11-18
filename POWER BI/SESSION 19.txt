@@ -1,0 +1,120 @@
+# Session 19 – Interactions, Edit Interactions, Drill-Through Pages & Hierarchical Navigation
+
+### Q1. Open rickshaw_report.pbix and create an Interactions page with a column chart, donut chart, and card. Use Edit Interactions to control filtering.
+
+**Ans:- Steps:**
+
+- Open Power BI Desktop.
+- Open the rickshaw_report.pbix file.
+- Click on the + icon to create a new page.
+- Rename the page as Interactions.
+- Select a Column Chart from the Visualizations Pane.
+- Drag zone to the X-axis.
+- Drag trip_id to the Y-axis and select Count.
+- Select a Donut Chart.
+- Drag payment_mode to Legend.
+- Drag trip_id to Values and select Count.
+- Select a Card visual.
+- Drag fare_inr into the Card and select Sum.
+- Click on the Column Chart.
+- Go to the Format tab.
+- Click on Edit Interactions.
+- Select the Filter option for the Donut Chart.
+- Select the None option for the Card.
+- Click on North in the Column Chart.
+
+**Result:**
+
+- The Donut Chart displays only North zone data.
+- The Fare Card remains unchanged when North is selected.
+- Edit Interactions was successfully applied.
+
+### Q2. Create a hierarchy using zone and pickup_area and use Drill-Down and Drill-Up in a bar chart.
+
+**Ans:- Steps:**
+
+- Open Power BI Desktop.
+- Open the rickshaw_report.pbix file.
+- Create a new report page.
+- Rename the page as Zones.
+- Go to the Data/Fields Pane.
+- Right-click on zone.
+- Select Create Hierarchy.
+- Rename the hierarchy as zone_area.
+- Drag pickup_area into the hierarchy below zone.
+- Select a Bar Chart from the Visualizations Pane.
+- Drag zone_area to the Y-axis.
+- Drag fare_inr to the X-axis.
+- Select Sum of fare_inr.
+- Click on the Drill-Down icon.
+- Select a zone to view its pickup areas.
+- Click on Expand to Next Level to view the zone and pickup area levels together.
+- Click on Drill-Up to return to the Zone level.
+
+**Result:**
+
+- The hierarchy was successfully created.
+- Drill-Down displayed pickup area details.
+- Drill-Up returned to the Zone level.
+
+### Q3. Create a Drill-Through page named Area Detail with average fare and trip details.
+
+**Ans:- Steps:**
+
+- Open Power BI Desktop.
+- Open the rickshaw_report.pbix file.
+- Create a new report page.
+- Rename the page as Area Detail.
+- Open the Visualizations Pane.
+- Drag pickup_area into the Drill-through field section.
+- Select a Card visual.
+- Drag fare_inr into the Card.
+- Change the aggregation to Average.
+- Select a Table visual.
+- Drag trip_id into the Table.
+- Drag trip_date into the Table.
+- Drag distance_km into the Table.
+- Drag fare_inr into the Table.
+- Check that no pickup area is selected by default.
+- Go to the Zones page.
+- Select a pickup area from the chart.
+- Right-click and select Drill through.
+- Click on Area Detail.
+
+**Result:**
+
+- The Area Detail page was successfully created.
+- The Card displayed the average fare.
+- The Table displayed trip details for the selected pickup area.
+
+### Q4. Add a Back Button to the Area Detail page and test Drill-Through navigation.
+
+**Ans:- Steps:**
+
+- Open Power BI Desktop.
+- Open the rickshaw_report.pbix file.
+- Go to the Area Detail page.
+- Click on the Insert tab.
+- Select Buttons.
+- Click on Back.
+- Place the Back Button on the report page.
+- Select the button.
+- Open the Format Pane.
+- Turn Action ON.
+- Select Back as the Action Type.
+- Go to the Zones page.
+- Drill down to the pickup_area level.
+- Right-click on any pickup area.
+- Select Drill through → Area Detail.
+- Check the selected area's trip details.
+- Hold Ctrl and click the Back Button in Power BI Desktop.
+- Check that it returns to the Zones page.
+- Repeat the process for another pickup area.
+- Save the report as rickshaw_report.pbix.
+
+**Result:**
+
+- Drill-Through navigation worked successfully.
+- The Area Detail page displayed the selected area's data.
+- The Back Button returned to the Zones page.
+- The Power BI report was saved successfully.
