@@ -1,0 +1,113 @@
+# Session 20 – Report Design & Publishing
+
+### Q1. Create a custom theme with three colours and Segoe UI font. Add a brand name to every report page.
+
+**Ans:- Steps:**
+
+- Open Power BI Desktop.
+- Open the rickshaw_report.pbix file.
+- Click on the View tab.
+- Select Themes.
+- Click Customize current theme.
+- Choose three colours: Blue, Red and White.
+- Select Segoe UI as the font.
+- Click Apply.
+- Go to Themes and select Save current theme.
+- Save the file as rickshaw_theme.json.
+- Click on the Insert tab.
+- Select Text Box.
+- Enter the brand name "City Rickshaw Services".
+- Place the text box at the top of the page.
+- Copy the text box to all report pages.
+
+**Result:**
+
+- The custom theme was created and saved.
+- The brand name was added to all report pages.
+
+### Q2. Arrange the Trips page using Gridlines and Snap to Grid. Create three cards of equal size.
+
+**Ans:- Steps:**
+
+- Open Power BI Desktop.
+- Go to the Trips page.
+- Click on the View tab.
+- Turn ON Gridlines.
+- Turn ON Snap to grid.
+- Select a Card visual.
+- Drag trip_id into the Card and select Count.
+- Create another Card.
+- Drag fare_inr and select Sum.
+- Create a third Card.
+- Drag distance_km and select Average.
+- Select the first Card.
+- Go to Format → General → Properties.
+- Set the Height and Width.
+- Apply the same Height and Width to all three Cards.
+- Set the same Y position for all Cards.
+- Arrange the Cards in one row.
+
+**Result:**
+
+- Three Cards were created successfully.
+- All Cards were aligned in one row with equal sizes.
+
+### Q3. Create Row-Level Security (RLS) roles for North_Manager and South_Manager.
+
+**Ans:- Steps:**
+
+- Open Power BI Desktop.
+- Open the rickshaw_report.pbix file.
+- Click on the Modeling tab.
+- Select Manage roles.
+- Click Create.
+- Enter the role name North_Manager.
+- Select the Rickshaw Trips table.
+- Apply the DAX filter:
+
+`[zone] = "North"`
+
+- Save the role.
+- Create another role named South_Manager.
+- Apply the DAX filter:
+
+`[zone] = "South"`
+
+- Save the role.
+- Click Modeling → View as.
+- Select North_Manager.
+- Check the filtered data on the Trips page.
+- Save a screenshot as rls_north.png.
+- Repeat the same process for South_Manager.
+- Save a screenshot as rls_south.png.
+
+**Result:**
+
+- Two RLS roles were created.
+- North_Manager displayed only North zone data.
+- South_Manager displayed only South zone data.
+- Both screenshots were saved.
+
+### Q4. Save the Power BI report and export all pages to PDF.
+
+**Ans:- Steps:**
+
+- Open Power BI Desktop.
+- Open the rickshaw_report.pbix file.
+- Check all report pages.
+- Click on File.
+- Select Save.
+- Save the file as rickshaw_report.pbix.
+- Click File → Export.
+- Select Export to PDF.
+- Wait for the PDF to generate.
+- Save the file as rickshaw_report.pdf.
+- Check that all required report pages are included.
+- Do not publish the report to Power BI Service.
+- Submit the PBIX and PDF files.
+
+**Result:**
+
+- The Power BI report was saved successfully.
+- All report pages were exported to PDF.
+- The PBIX and PDF files were prepared for submission.
